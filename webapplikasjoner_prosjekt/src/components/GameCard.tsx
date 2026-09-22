@@ -4,7 +4,7 @@ export function GameCard({ game }: { game: Game }) {
   const { title, boxArtImageURL, genres, releaseDate } = game;
 
   return (
-    <article className="pt-10">
+    <article className="pt-10 pb-10">
       <img src={boxArtImageURL} alt={`${title} box-art`} width="300" height="300" />
       <section className="bg-[#d7d7d7]">
         <p><span className="font-bold">Title: </span>{title}</p>

@@ -1,6 +1,9 @@
 import { Counter } from "@/components/Counter";
 import { TimeClient } from "@/components/TimeClient";
-import { GameList } from "./GameList";
+import { GameList } from "../../components/GameList";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { PageLayout } from "@/components/PageLayout";
 
 /**
  * En server-komponent. Den kjører på serveren, én gang per forespørsel, og
@@ -10,7 +13,7 @@ import { GameList } from "./GameList";
  * Server-komponent er standarden i RedwoodSDK. Trenger du klikk eller state,
  * lager du en klient-komponent, som `TimeClient` og `Counter` under.
  */
-export function Home() {
+export function Home() { 
   // const now = new Date().toLocaleString("no-NO");
 
   // return (
@@ -46,4 +49,11 @@ export function Home() {
   //     </ul>
   //   </main>
   // );
+  return (
+    <main>
+      <PageLayout>
+        <GameList />
+      </PageLayout>
+    </main>
+  );
 }

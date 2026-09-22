@@ -1,9 +1,11 @@
+import { Hash } from "node:crypto";
 import { Game } from "./game";
 import { userSettings } from "./settings";
 
 export type User = {
-  id: string,
-  name: string,
-  gameList: Game[],
-  userSettings: userSettings
+  readonly id: string,
+  username: string,
+  password: string,
+  gameList?: Game[],
+  userSettings?: userSettings
 }

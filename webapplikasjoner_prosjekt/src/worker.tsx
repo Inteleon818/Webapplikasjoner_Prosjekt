@@ -2,8 +2,9 @@ import { defineApp } from "rwsdk/worker";
 import { render, route } from "rwsdk/router";
 import { Document } from "@/app/Document";
 import { setCommonHeaders } from "@/app/headers";
-import { Home } from "@/app/pages/Home";
-import { GameList } from "./app/pages/GameList";
+import { CreateUserPage } from "@/app/pages/CreateUserPage";
+import { Home } from "./app/pages/Home";
+
 
 /**
  * Alt som ligger på `ctx` for én forespørsel.
@@ -25,8 +26,8 @@ const app = defineApp([
 
   // Sider. render(Document, [...]) pakker dem i et helt HTML-dokument.
   render(Document, [
-    route("/", Home),
-    route("/game-list", () => <GameList />), 
+    route("/", Home), 
+    route("/create-user", CreateUserPage)
   ]),
 ]);
 
