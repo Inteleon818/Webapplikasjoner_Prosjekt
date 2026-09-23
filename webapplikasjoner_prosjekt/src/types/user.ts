@@ -7,5 +7,4 @@ export type User = {
   username: string,
   password: string,
   gameList?: Game[],
-  userSettings?: userSettings
 }

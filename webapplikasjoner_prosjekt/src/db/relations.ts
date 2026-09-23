@@ -11,16 +11,7 @@ import * as schema from "./schema";
 
 export const relations = defineRelations(schema, (r) => ({
   users: {
-    // En bruker har mange oppgaver.
-    tasks: r.many.tasks({ from: r.users.id, to: r.tasks.userId }),
-  },
-  tasks: {
-    // En oppgave har én bruker. `optional: false` gjør den ikke-nullbar i typen.
-    user: r.one.users({
-      from: r.tasks.userId,
-      to: r.users.id,
-      optional: false,
-    }),
+    games: r.many.games({ from: r.users.id, to: r.games.id }),
   },
 }));
 
