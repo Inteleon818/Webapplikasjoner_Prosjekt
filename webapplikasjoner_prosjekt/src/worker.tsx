@@ -4,6 +4,8 @@ import { Document } from "@/app/Document";
 import { setCommonHeaders } from "@/app/headers";
 import { CreateUserPage } from "@/app/pages/CreateUserPage";
 import { Home } from "./app/pages/Home";
+import UserProfile from "./app/pages/UserProfile";
+import ChangePasswordPage from "./app/pages/ChangePasswordPage";
 
 
 /**
@@ -27,7 +29,9 @@ const app = defineApp([
   // Sider. render(Document, [...]) pakker dem i et helt HTML-dokument.
   render(Document, [
     route("/", Home), 
-    route("/create-user", CreateUserPage)
+    route("/create-user", CreateUserPage),
+    route("/user-profile", UserProfile),
+    route("/change-password", ChangePasswordPage),
   ]),
 ]);
 

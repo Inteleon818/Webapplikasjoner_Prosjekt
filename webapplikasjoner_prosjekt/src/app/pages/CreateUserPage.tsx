@@ -2,6 +2,7 @@
 
 import { PageLayout } from "@/components/PageLayout";
 import { useState } from "react";
+import { navigate } from "rwsdk/client";
 
 export function CreateUserPage() {
   const [username, setUsername] = useState("");
@@ -37,6 +38,7 @@ export function CreateUserPage() {
               setPreviewUsername(username);
               setPreviewPassword(password);  
               console.log(`Username: ${username}, Password: ${password}`);
+              navigate("/user-profile");
             }}
           >Submit
           </button>
